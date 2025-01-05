@@ -1,0 +1,4 @@
+#/bin/bash/
+
+echo "enter the element"
+echo "shell  scripting"
