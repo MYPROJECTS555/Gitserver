@@ -2,3 +2,5 @@
 
 echo "enter the element"
 echo "shell  scripting"
+
+echo " poll asm is working fine"
