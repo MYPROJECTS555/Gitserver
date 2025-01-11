@@ -1,3 +1,4 @@
 #!/bin/bash
+chmod 777 Script9.txt
 
 echo " This is run by poll scm"
