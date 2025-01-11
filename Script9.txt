@@ -1,4 +1,4 @@
 #!/bin/bash
 
-
+uptime
 echo " This is run by poll scm"
