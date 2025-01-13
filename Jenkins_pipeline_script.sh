@@ -31,6 +31,7 @@ pipeline{
                 Sh ''' 
                 echo "This is number of current runing process"
                 ps -ef | head -10 |tail -5
+                '''
 
 
           }
