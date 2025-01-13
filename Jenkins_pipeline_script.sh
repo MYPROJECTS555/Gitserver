@@ -5,8 +5,10 @@ stages{
 stage{
 steps{
 
-sh echo "  print the out put
-
+sh '''
+echo "  print the output"
+df -h
+'''
 }
 
 }
