@@ -10,6 +10,12 @@ stage('git checkout')
         git branch: 'dev', url:'https://github.com/MYPROJECTS555/Gitserver.git'
     }
 }
-
+stage('display')
+{
+    steps
+    {
+      echo "this is checkout"
+    }
+}
 }
 }
