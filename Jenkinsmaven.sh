@@ -16,18 +16,18 @@ pipeline
             git branch:'dev' , url:'https://github.com/MYPROJECTS555/Gitserver.git'
           } 
         }
-        stage('mvn compile')
+        stage('compile')
         {
           steps
           {
-            sh " mvn compile "
+            sh "mvn compile"
           }
         }
-        stage('mvn Build')
+        stage('Build')
         {
           steps
           {
-            sh " mvn clean install "
+            sh "mvn clean install"
           }
         }
     }
