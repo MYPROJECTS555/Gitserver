@@ -19,14 +19,14 @@ pipeline
         {
           steps
           {
-            sh "mvn compile"
+            sh " mvn compile "
           }
         }
         stage('mvn Build')
         {
           steps
           {
-            sh "mvn clean install"
+            sh " mvn clean install "
           }
         }
     }
