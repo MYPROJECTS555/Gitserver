@@ -30,5 +30,16 @@ pipeline
             sh "mvn clean install"
           }
         }
-    }
+         stage('present working directory')
+        {
+          steps
+          {
+            sh '''
+            echo "this location of file"
+            pwd
+            '''
+          }
+        }
+   
+   }
 }
