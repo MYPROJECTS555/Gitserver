@@ -36,7 +36,7 @@ pipeline
           {
             sh '''
             echo "this location of file"
-            pwd
+            $pwd
             '''
           }
         }
