@@ -1,0 +1,3 @@
+#!/bin/bash
+currentdate=$(date)    # whenever we declare command as a variable we should written with dollar.
+echo "the currentdate :$currentdate"
