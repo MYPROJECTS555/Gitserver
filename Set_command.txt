@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+                         ####   in this example we are using set -x command to display the command with rresult.
+                         #so we can understand this command is for this result.
+df -h
+nproc
+ps
