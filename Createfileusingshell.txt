@@ -1,0 +1,6 @@
+#!/bin/bash
+                    #creating folder using shell script
+mkdir folder1
+                   #creating two files  inside it
+cd folder1
+touch file1.txt file.txt
