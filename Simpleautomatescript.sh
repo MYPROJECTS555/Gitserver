@@ -1,10 +1,10 @@
 #!/bin/bash
-#set -e
+set -e
 #set -x
 #set -0
 
-#yum install -y docker
-#systemctl start docker
+yum install -y docker
+systemctl start docker
                        #### frist if we executing this script it will work if docker is already exist we need to comment for some command . This is scripting is for install docker. 
 
 Date=$(date | awk '{print}')
