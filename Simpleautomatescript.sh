@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 #set -x
 #set -0
 
@@ -20,7 +20,7 @@ echo " The version is $v "
 # command is  : crontab -e
 # empty file will open once we run above command
 #syntax : 
-* * * * * /path/to/your/script.sh   >>    /path/to/your/log.log 
+## * * * * * /path/to/your/script.sh   >>    /path/to/your/log.log 
 
 
  # 1) * * * * * means script will execute every minutes
