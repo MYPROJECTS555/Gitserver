@@ -17,7 +17,7 @@ pipeline
         stage('Install Docker') {
             steps {
                sh '''
-               systemctl status docker | awk '/Active/{print $3}' >> /home/ec2-user/log.txt
+               systemctl status docker | awk '/Active/{print $3}' 
                
                '''
             }
