@@ -16,9 +16,10 @@ pipeline
         }
         stage('Install Docker') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'root_credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh "echo '$PASSWORD' | sudo -S yum install -y docker"
-                }
+               sh '''
+               systemctl status docker | awk '/Active/{print $3}' >> /home/ec2-user/log.txt
+               
+               '''
             }
         }
     }
