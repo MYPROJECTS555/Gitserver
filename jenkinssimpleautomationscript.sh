@@ -20,7 +20,7 @@ pipeline
                 sh '''
                 
                 echo " system status"
-                 yum install -y docker
+                 sudo yum install -y docker
               
                 '''
             }
