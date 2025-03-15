@@ -17,8 +17,16 @@ pipeline
         stage('Install Docker') {
             steps {
                sh '''
-               systemctl status docker | awk '/Active/{print $3}' 
-               
+               status1=$(systemctl status docker | awk '/Active/{print $3}' | tr -d "[()]" )
+               status2="running"
+               start=$(systemctl start docker)
+               if [ "$status1" == "&status2"]
+               then
+               echo " application is running"
+               else
+               echo " application is not running need to start"
+               echo " application is running : $start "
+               fi
                '''
             }
         }
