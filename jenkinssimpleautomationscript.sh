@@ -14,15 +14,11 @@ pipeline
                 '''
             }
         }
-        stage("Installing docker")
-        {
-            steps{
-                sh '''
-                
-                echo " system status"
-                 sudo yum install -y docker
-              
-                '''
+        stage('Install Docker') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'root_credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh "echo '$PASSWORD' | sudo -S yum install -y docker"
+                }
             }
         }
     }
