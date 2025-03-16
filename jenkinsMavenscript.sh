@@ -6,13 +6,13 @@ pipeline
         jdk 'java-11'
         maven 'maven'
       }
-    stages('maven project')
+    stages
     {
         stage('codecheckout')
         {
          steps  
           {
-            git branch:'dev' , url:'https://github.com/MYPROJECTS555/Project_devops_demo.git'
+            git branch:'main' , url:'https://github.com/MYPROJECTS555/Project_devops_demo.git'
           } 
         }
         stage('mvn compile')
