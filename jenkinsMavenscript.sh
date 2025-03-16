@@ -8,7 +8,7 @@ pipeline
       }
     stages('maven project')
     {
-        stage('code checkout')
+        stage('codecheckout')
         {
          steps  
           {
