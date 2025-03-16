@@ -12,7 +12,7 @@ pipeline
         {
          steps  
           {
-            git branch:'dev' , url:'https://github.com/MYPROJECTS555/Gitserver.git'
+            git branch:'dev' , url:'https://github.com/MYPROJECTS555/Project_devops_demo.git'
           } 
         }
         stage('mvn compile')
