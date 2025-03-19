@@ -29,7 +29,7 @@ password       rjxffbfgeajrqdmh
 account default : gmail
 EOF
 
-# Set the correct permissions for the msmtp configuration file
+# #Set the correct permissions for the msmtp configuration file
 chmod 600 ~/.msmtprc
 
 # Create a log file for msmtp
