@@ -1,0 +1,11 @@
+FROM node:16                             ##it is dependecy for react web project
+
+WORKDIR /app                             ## creating a folder app in the node:16 container
+
+COPY package*.json ./                    ## copy the file start from package and ends with json  from local to node:16 container
+                                         ##("LICENSE  README.md  dockerfile  package-lock.json  package.json  public  src")
+
+RUN npm install                          ## npm is package build tool and build package
+COPY . .                                 ## copy all files from local to folder in container 
+EXPOSE 3000                               ## assigning a port value to container
+CMD ["npm","start"]                         ## npm start will start npm build tool and build package .
