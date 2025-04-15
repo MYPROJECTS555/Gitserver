@@ -9,3 +9,6 @@ RUN npm install                          ## npm is package build tool and build 
 COPY . .                                 ## copy all files from local to folder in container 
 EXPOSE 3000                               ## assigning a port value to container
 CMD ["npm","start"]                         ## npm start will start npm build tool and build package .
+
+
+                                            ## reactproject   https://github.com/aditya-sridhar/simple-reactjs-app
