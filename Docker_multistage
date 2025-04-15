@@ -1,0 +1,18 @@
+FROM node:18-alpine AS installer         ###  Alpine Linux is a Linux distribution designed to be small, simple, and secure and Alpine Linux is very small, often around 5MB. 
+                                         ###     This results in faster boot times and reduced disk space usage. and as installer is layer
+
+WORKDIR /app                             ### creating working directory in container to move the all package from local to conatiner
+
+COPY package*.json ./                    ### copy the file starting form package and ends with json .
+                                         ###  ./ used to copy the file to app folder
+RUN npm install                           ##   it is build tool. it is bundle the package with required dependencies
+
+COPY . .                                  ## copy the all file to app folder in container                               
+    
+RUN npm run build                         ## it is used to build package
+
+FROM nginx:latest AS deployer               ## 
+
+COPY --from=installer /app/build /usr/share/nginx/html  
+
+
