@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'NodeJS 18' //Replace NodeJS 18 with the name configured in Global Tool Configuration
+        NodeJS 18 'NodeJS 18' //Replace NodeJS 18 with the name configured in Global Tool Configuration
     }
     stages {
            stage('codecheckout')
