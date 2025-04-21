@@ -8,7 +8,7 @@ pipeline {
         {
          steps  
           {
-            git branch:'main' , url:'https://github.com/MYPROJECTS555/WebSiteProject.git'
+            git branch:'deploy' , url:'https://github.com/MYPROJECTS555/React-js-node_web_application.git'
           } 
         }
         stage('Node.js Build') {
