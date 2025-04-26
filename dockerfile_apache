@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+ENV user=vikas
+RUN apt-get update && \
+    apt-get install apache2 -y && \
+    apt-get clean
+CMD ["apache2ctl","-D","FOREGROUND"]
+COPY index.html /var/www/html/
+EXPOSE 80
