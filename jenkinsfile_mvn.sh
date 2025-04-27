@@ -1,4 +1,4 @@
-pipeline 
+pipeline
 {
  agent any
  tools
@@ -7,29 +7,30 @@ pipeline
   maven 'maven'
   }
 
- stages
-   {
-   stage('code-checkout')
-   {
-   steps
-   {
-   git branch:'master',url:'https://github.com/shashirajraja/shopping-cart'
+      stages
+      {
+       stage('code-checkout')
+      {
+       steps
+       {
+         git branch:'master',url:'https://github.com/shashirajraja/shopping-cart'
+       }
+      }
+       stage('mvn compile')
+       {
+         steps
+         {
+            sh 'mvn compile'
+         }
+       }
+       stages('mvn install')
+       {
+        steps
+        {
+          sh 'mvn clean install'
+        }
+     }
    }
-   }
-   stage('mvn compile')
-   {
-   steps
-   {
-   sh 'mvn compile'
-   }
-   }
-   stages('mvn install')
-   {
-   steps
-   {
-   sh 'mvn clean install'
-   echo " package is builded "
-   }
-   }  
-   }
+}
+
 
