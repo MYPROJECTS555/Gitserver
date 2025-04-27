@@ -28,7 +28,8 @@ pipeline
    steps
    {
    sh 'mvn clean install'
+   echo " package is builded "
    }
    }  
    }
-}
+
