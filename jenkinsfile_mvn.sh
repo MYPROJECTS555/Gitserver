@@ -23,7 +23,7 @@ pipeline
             sh 'mvn compile'
          }
        }
-       stages('mvn-install')
+       stage('mvn-install')
        {
         steps
         {
