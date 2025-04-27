@@ -16,14 +16,14 @@ pipeline
          git branch:'master',url:'https://github.com/shashirajraja/shopping-cart'
        }
       }
-       stage('mvn compile')
+       stage('mvn-compile')
        {
          steps
          {
             sh 'mvn compile'
          }
        }
-       stages('mvn install')
+       stages('mvn-install')
        {
         steps
         {
