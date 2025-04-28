@@ -3,6 +3,7 @@ pipeline
     agent any 
     tools
       {
+        jdk 'java-11'
         maven 'maven'
       }
     stages
@@ -11,7 +12,7 @@ pipeline
         {
          steps  
           {
-            git branch:'main' , url:'https://github.com/MYPROJECTS555/WebSiteProject.git'
+            git branch:'main' , url:'https://github.com/MYPROJECTS555/SimpleJavaCodeTest.git'
           } 
         }
         stage('mvn compile')
