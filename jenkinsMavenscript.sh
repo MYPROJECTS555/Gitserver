@@ -29,5 +29,12 @@ pipeline
             sh "mvn clean install"
           }
         }
+         stage('docker-integration')
+        {
+          steps
+          {
+            sh " docker build -t nameisvikas/apache:1 ."
+          }
+        }
     }
 }
