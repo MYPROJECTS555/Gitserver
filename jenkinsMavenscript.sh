@@ -12,7 +12,7 @@ pipeline
         {
          steps  
           {
-            git branch:'main' , url:'https://github.com/MYPROJECTS555/SimpleJavaCodeTest.git'
+            git branch:'master',url:'https://github.com/shashirajraja/shopping-cart.git'
           } 
         }
         stage('mvn compile')
