@@ -12,7 +12,7 @@ pipeline
     {
       steps
       {
-        git branch:'master',url:'https://github.com/buddy-works/simple-java-project.git'
+        git branch:'main',url:'https://github.com/MYPROJECTS555/SimpleJavaCodeTest.git'
       }
     }
     stage('mvn-complie')
@@ -33,7 +33,7 @@ pipeline
     {
       steps
       {
-        sh 'docker pull nameisvikas/apache'
+        sh 'docker build -t tomcat:v1 .'
       }
     }
     }
