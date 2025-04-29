@@ -33,7 +33,7 @@ pipeline
     {
       steps
       {
-        sh 'docker build -t tomcat:v1 .'
+        sh 'docker pull nameisvikas/apache_container '
       }
     }
     }
