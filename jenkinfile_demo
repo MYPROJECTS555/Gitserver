@@ -36,5 +36,12 @@ pipeline
         sh 'docker pull nameisvikas/apache_container '
       }
     }
+     stage('docker-container')
+    {
+      steps
+      {
+        sh 'docker run -it -d --name c1 -p 8000:8000 nameisvikas/apache_container '
+      }
+    }
     }
 }
