@@ -1,0 +1,40 @@
+pipeline
+{
+    agent any
+    tools
+    {
+      jdk 'java'
+      maven 'maven'
+    }
+    stages
+    {
+    stage('code-checkout')
+    {
+      steps
+      {
+        git branch:'master',url:'https://github.com/buddy-works/simple-java-project.git'
+      }
+    }
+    stage('mvn-complie')
+    {
+      steps
+      {
+        sh 'mvn compile'
+      }
+    }
+     stage('mvn-install')
+    {
+      steps
+      {
+        sh 'mvn clean install'
+      }
+    }
+     stage('docker-integartion')
+    {
+      steps
+      {
+        sh 'docker build -t nameisvikas/apache:1 . '
+      }
+    }
+    }
+}
