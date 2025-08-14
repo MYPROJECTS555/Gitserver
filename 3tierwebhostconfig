@@ -87,9 +87,49 @@ date.timezone = America/Chicago
 
 STEP -4
 
-Here we are cloning 3 tier web application form git hub.
+-- Here we are cloning 3 tier web application form git hub.
 
-  git clone https://github.com/SHRIDHARMUDASHI/orangehrms.git
+       git clone https://github.com/SHRIDHARMUDASHI/orangehrms.git
+
+-- go inside orangehrms Folder
+     cd  orangehrms
+
+
+-- there is a zip file  
+        orangehrm-4.0.zip
+
+--  Move that zip file to  /var/www
+
+--    once file is moved to /var/www
+--     then go to that directory 
+-- install unzip to extract zip file
+
+once unzip is installed . unzip the file
+
+       command : unzip    orangehrm-4.0.zip
+
+-- rename the orangehrm-4.0 to orangehrm
+       mv orangehrm-4.0 orangehrm
+
+----giving permission to orangehrm folder
+
+        chown -R  www-data:www-data  /var/www/orangehrm
+
+----- giving permission like read ,write and executed 
+
+       chmod  -R 755 /var/www/orangehrm 
+--- creating virtual box
+vi /etc/apache2/site-available/orangehrm.conf
+
+
+orangehrm.conf 
+
+enable the virtual box
+and 
+restart the apache 2 server
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
